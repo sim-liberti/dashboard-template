@@ -1,0 +1,30 @@
+{% extends 'masterpage-blank.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static '/css/components.css/' %}">
+<link rel="stylesheet" href="{% static '/css/user/logout.css/' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
+
+{% block body %}
+<div class="card wrapper">
+    <h1>Logout</h1>
+    {% if request.user.is_authenticated %}
+    <form action="." method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to log out?</p>
+        <div class="form-field">
+            <button type="submit" class="btn btn-violet">Logout</button>
+        </div>
+    </form>
+    {% else %}
+    <div class="logout-info">
+        <p>You successfully logged out.</p>
+        <a href="{% url 'user-login' %}" class="btn btn-violet">Log back in</a>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

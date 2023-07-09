@@ -1,0 +1,49 @@
+:root{
+    /* BASIC COLORS */
+    --color-primary: #0d6efd;
+    --color-secondary: #6c757d;
+    --color-success: #198754;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-info: #0dcaf0;
+    /* NEUTRAL COLORS */
+    --color-neutral-200: #e5e7e9;
+    --color-neutral-300: #ced2d6;
+    --color-neutral-400: #9ea6ac;
+    --color-neutral-500: #808790;
+    --color-neutral-600: #5a5f66;
+    --color-neutral-700: #444c53;
+    --color-neutral-800: #393f46;
+    --color-neutral-900: #23292e;
+    --color-neutral-1000: #212529;
+    /* DARK COLORS */
+    --color-dark-red: #910031;
+    --color-ochre-yellow: #f99a18;
+    --color-sea-green: #0391a3;
+    --color-baby-blue: #01a8cd;
+    /* YELLOWS */
+    --color-yellow-200: #ffe480;
+    --color-yellow-300: #ffc400;
+    --color-yellow-400: #ffac00;
+    --color-yellow-500: #ff9a1f;
+    /* REDS */
+    --color-red-200: #ff8f73;
+    --color-red-300: #fe7551;
+    --color-red-400: #ff5730;
+    --color-red-500: #de360a;
+    /* BLUES */
+    --color-blue-200: #7ae2f1;
+    --color-blue-300: #00c8e6;
+    --color-blue-400: #00b8d9;
+    --color-blue-500: #00a4be;
+    /* VIOLETS */
+    --color-violet-200: #d7a9d6;
+    --color-violet-300: #c170c0;
+    --color-violet-400: #c054bd;
+    --color-violet-500: #a239a1;
+    /* GREENS */
+    --color-green-200: #58d9a4;   
+    --color-green-300: #36b27d;   
+    --color-green-400: #00875a;   
+    --color-green-500: #016644;   
+}

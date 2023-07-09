@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" type="image/png" href="{% static '/images/favicon.svg' %}" >
+    
+    <link rel="stylesheet" href="../static/css/master.css">
+    <link rel="stylesheet" href="../static/css/components.css">
+    
+    <title>Dashboard | {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="sidebar open">
+        <div class="logo-details">
+            <img src="../static/images/icons8-python-480.svg" alt="logo">
+            <div class="logo_name">Dashboard</div>
+            <i class='bx bx-menu-alt-right' id="btn" ></i>
+        </div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-home'></i>
+                        <span class="links_name">Homepage</span>
+                    </a>
+                    <span class="tooltip">Homepage</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-graduation' ></i>
+                        <span class="links_name">Booklet</span>
+                    </a>
+                    <span class="tooltip">Booklet</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-book'></i>
+                        <span class="links_name">Exams</span>
+                    </a>
+                    <span class="tooltip">Exams</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-user' ></i>
+                        <span class="links_name">Profile</span>
+                    </a>
+                    <span class="tooltip">Profile</span>
+                </li>
+                <hr>
+                <li>
+                    <a href="{% url 'user-logout' %}">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links_name">Logout</span>
+                    </a>
+                    <span class="tooltip">Logout</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="home-section">
+        {% block body %}
+        {% endblock %}
+    </section>
+
+    <script src="../static/js/master.js"></script>
+    <script src="https://kit.fontawesome.com/f65f092a35.js" crossorigin="anonymous"></script>
+</body>
+</html>

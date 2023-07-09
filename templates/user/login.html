@@ -1,0 +1,37 @@
+{% extends 'masterpage-blank.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static '/css/components.css/' %}">
+<link rel="stylesheet" href="{% static '/css/user/login.css/' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
+
+{% block body %}
+<div class="card wrapper">
+    <h1>Login</h1>
+    <form action="." method="post">
+        {% csrf_token %}
+        <div class="form-field">
+            <label for="username"><i class='bx bxs-user'></i></label>
+            <input type="text" name="username" id="username" placeholder="Username">
+        </div>
+        <div class="form-field">
+            <label for="password"><i class='bx bxs-lock-open-alt' ></i></label>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div class="form-field">
+            <button type="submit" class="btn btn-violet">Login</button>
+        </div>
+    </form>
+    <div class="signup-link">
+        <p>Not a member? <a href="{% url 'user-signup' %}">Sign up now </a></p>
+    </div>
+    {% if error_message %}
+        <div class="error-message">
+            <p class="text-danger">{{ error_message }}</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
