@@ -5,8 +5,8 @@ body{
     justify-content: center;
 }
 .wrapper{
-    min-height: 500px;
-    min-width: 400px;
+    min-height: 550px;
+    min-width: 500px;
 }
 .wrapper h1{
     text-align: center;
@@ -34,7 +34,7 @@ body{
 }
 .form-field input{
     height: 55px;
-    width: 250px;
+    width: 370px;
     border: none;
     border-radius: 0 5px 5px 0;
     background-color: var(--color-neutral-700);
@@ -49,11 +49,8 @@ body{
 .form-field input:focus{
     outline: none;
 }
-.form-field input[type=password]{
-    color: var(--color-neutral-200);
-}
 .form-field button{
-    width: 310px;
+    width: 430px;
     height: 50px;
 }
 
@@ -66,7 +63,7 @@ body{
     text-decoration: none;
     position: relative;
 }
-.login-link a::before{
+/* .login-link a::before{
     position: absolute;
     content: "";
     width: 0;
@@ -77,6 +74,18 @@ body{
 .login-link a:hover::before{
     border: 1px solid var(--color-violet-500);
     width: 100%;
+} */
+
+.first-last-name{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+input[name=firstname]{
+    width: 150px;
+}
+input[name=lastname]{
+    width: 150px;
 }
 
 .error-message{

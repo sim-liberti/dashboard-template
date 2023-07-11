@@ -7,15 +7,18 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" type="image/png" href="{% static '/images/favicon.svg' %}" >
     
-    <link rel="stylesheet" href="../static/css/master.css">
-    <link rel="stylesheet" href="../static/css/components.css">
+    <link rel="stylesheet" href="{% static '/css/master.css' %}">
+    <link rel="stylesheet" href="{% static '/css/components.css' %}">
     
+    {% block head %}
+    {% endblock %}
+
     <title>Dashboard | {% block title %}{% endblock %}</title>
 </head>
 <body>
     <div class="sidebar open">
         <div class="logo-details">
-            <img src="../static/images/icons8-python-480.svg" alt="logo">
+            <img src="{% static '/images/favicon.svg' %}" alt="logo">
             <div class="logo_name">Dashboard</div>
             <i class='bx bx-menu-alt-right' id="btn" ></i>
         </div>
@@ -43,13 +46,22 @@
                     <span class="tooltip">Exams</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{% url 'user-profile' %}">
                         <i class='bx bx-user' ></i>
                         <span class="links_name">Profile</span>
                     </a>
                     <span class="tooltip">Profile</span>
                 </li>
                 <hr>
+                {% if user.is_superuser %}
+                <li>
+                    <a href="{% url 'admin:index' %}">
+                        <i class='bx bx-wrench'></i>
+                        <span class="links_name">Admin</span>
+                    </a>
+                    <span class="tooltip">Admin</span>
+                </li>
+                {% endif %}
                 <li>
                     <a href="{% url 'user-logout' %}">
                         <i class='bx bx-log-out'></i>
@@ -65,7 +77,7 @@
         {% endblock %}
     </section>
 
-    <script src="../static/js/master.js"></script>
+    <script src="{% static '/js/master.js' %}"></script>
     <script src="https://kit.fontawesome.com/f65f092a35.js" crossorigin="anonymous"></script>
 </body>
 </html>

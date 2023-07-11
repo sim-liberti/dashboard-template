@@ -1,0 +1,22 @@
+{% extends 'masterpage.html' %}
+{% load static %}
+{% block title %}Profile{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static '/css/user/profile.css' %}">
+{% endblock %}
+
+{% block body %}
+    <h1>Profile</h1>
+    <div class="card wrapper">
+        <div class="profile-picture">
+            <img src="{{ user.profile.image.url }}" alt="profile">
+        </div>
+        <div class="profile-info">
+            <p class="name">{{ user.first_name }} {{ user.last_name }}</p>
+            <p class="username text-secondary"><span>Username:</span> {{ user.username }}</p>
+            <p class="email text-secondary"><span>Email:</span> {{ user.email }}</p>
+            <a href="/user/profile/?edit=true" class="btn btn-sm btn-outline-danger">Edit Profile</a>
+        </div>
+    </div>
+{% endblock %}

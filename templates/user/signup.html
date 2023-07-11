@@ -13,6 +13,16 @@
     <h1>Create account</h1>
     <form action="" method="post">
         {% csrf_token %}
+        <div class="first-last-name">
+            <div class="form-field">
+                <label for="firstname"><i class='bx bxs-id-card'></i></label>
+                <input type="text" name="firstname" id="firstname" placeholder="First Name">
+            </div>
+            <div class="form-field">
+                <label for="lastname"><i class='bx bxs-id-card'></i></label>
+                <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+            </div>    
+        </div>
         <div class="form-field">
             <label for="username"><i class='bx bxs-user'></i></label>
             <input type="text" name="username" id="username" placeholder="Username">
@@ -22,7 +32,7 @@
             <input type="text" name="email" id="email" placeholder="Email">
         </div>
         <div class="form-field">
-            <label for="password"><i class='bx bxs-lock-open-alt' ></i></label>
+            <label for="password"><i class='bx bxs-lock-open-alt'></i></label>
             <input type="password" name="password" id="password" placeholder="Password">
         </div>
         <div class="form-field">
@@ -30,7 +40,7 @@
         </div>
     </form>
     <div class="login-link">
-        <p>Already a member? <a href="#">Login now </a></p>
+        <p>Already a member? <a href="{% url 'user-login' %}">Login now </a></p>
     </div>
     {% if error_message %}
     <div class="error-message">

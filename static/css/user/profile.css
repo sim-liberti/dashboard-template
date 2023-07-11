@@ -1,0 +1,64 @@
+.wrapper{
+    margin: 50px auto;
+    height: 350px;
+    width: 600px;
+    max-width: 1000px;
+    overflow: hidden;
+}
+.profile-picture{
+    background: url('/static/images/background.png');
+    background-size: cover;
+    min-height: 100px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.profile-picture img{
+    background-color: var(--color-neutral-200);
+    max-width: 90px; 
+    border-radius: 100%;
+    border: 5px solid var(--color-neutral-200);
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+.profile-info{
+    padding: 2em;
+    margin-top: 20px;
+}
+.profile-info span{
+    font-weight: bold;
+}
+.name{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.profile-info a{
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.form-field{ 
+    margin-top: 20px;
+}
+.form-field label{
+    display: block;
+    margin-bottom: 2px;
+    font-size: .9em;
+}
+
+.edit input[type=text]{
+    width: 200px;
+    height: 35px;
+    padding-left: 10px;
+    background: var(--color-neutral-200);
+    outline: 1px solid var(--color-neutral-1000);
+    border: none;
+    border-radius: 5px;
+}
+.edit{
+    height: 500px;
+}
+.edit form{
+    margin-top: 60px;
+    margin-left: 50px;
+}

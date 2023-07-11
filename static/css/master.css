@@ -26,8 +26,10 @@ body{
     padding: 6px 14px;
     z-index: 99;
     transition: var(--trans-width-03);
-    /* background: url('/static/images/background.png'); */
-    background: var(--color-neutral-1000);
+    background: url('/static/images/background-vertical.png');
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+    /* background: var(--color-neutral-1000); */
 }
 .sidebar.open{
     width: 250px;
@@ -161,14 +163,14 @@ body{
 /* HOME SECTION */
 .home-section{
     position: relative;
-    /* background: #E4E9F7; */
+    background: var(--color-neutral-300);
     min-height: 100vh;
     top: 0;
     left: 78px;
     width: calc(100% - 78px);
     transition: var(--trans-03);
     z-index: 2;
-
+    padding: 2em;
 }
 .sidebar.open ~ .home-section{
     left: 250px;
