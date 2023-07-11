@@ -1,0 +1,43 @@
+{% extends 'masterpage.html' %}
+{% load static %}
+{% block title %}Booklet{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static '/css/booklet/booklet.css' %}">
+{% endblock %}
+
+{% block body %}
+
+{% if user.booklet.setup_status == 0 %}
+<div class="alert-box">
+    <i class="fa-solid fa-triangle-exclamation"></i>
+    <p>Warning! You need to finish setting up your personal booklet. Compile all the fields below to complete.</p>
+</div>
+<div class="card wrapper">
+    <form action="." method="POST">
+        <div class="form-field">
+            <label for="matricola">Matricola: </label>
+            <input type="text" name="matricola" id="matricola">
+        </div>
+        <div class="form-field">
+            <label for="cf">CF: </label>
+            <input type="text" name="cf" id="cf">
+        </div>
+        <div class="form-field">
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email">
+        </div>
+        <div class="form-field">
+            <label for="cf">Total exams: </label>
+            <input type="number" name="totalexams" id="totalexams">
+        </div>
+        <div class="form-field">
+            <label for="cf">Total credits: </label>
+            <input type="number" name="totalnumber" id="totalnumber">
+        </div>
+        <button type="submit" class="btn btn-danger">Save</button>
+    </form>
+</div>
+{% endif %}
+
+{% endblock %}

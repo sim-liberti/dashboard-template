@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 from .models import Profile
+from apps.booklet.models import Booklet
 
 # Create your views here.
 def login_view(request):
@@ -48,6 +49,8 @@ def signup_view(request):
 
         profile = Profile(user=user)
         profile.save()
+
+        booklet = Booklet(owner=user)
 
         return redirect('homepage')
     return render(request, 'user/signup.html')
